@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Додати заклад
+{% endblock %}
+{% block content %}
+  <h2>Додати заклад</h2>
+
+
+  <form method="post">
+      {% csrf_token %}
+      <label for="title"><b>Назва закладу</b></label>
+      {{ form.title }}<br>
+      <label for="title"><b>Розташування</b></label>
+      {{ form.author }}<br>
+      <label for="title"><b>Опис</b></label>
+      {{ form.text }}<br>
+      <label for="title"><b>Рік відкриття</b></label>
+      {{ form.published }}<br>
+      <label for="title"><b>Кількість місць</b></label>
+      {{ form.count }}<br>
+    <button type="submit" class="btn btn-success">Додати</button>
+  </form>
+{% endblock %}

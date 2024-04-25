@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Змінити інформацію про заклад
+{% endblock %}
+
+
+{% block content %}
+  <h2>Змінити програму</h2>
+  <form action="" method="post" autocomplete="off">
+      {% csrf_token %}
+      <label for="title"><b>Назва закладу</b></label>
+      {{ form.title }}<br>
+      <label for="title"><b>Розташування</b></label>
+      {{ form.author }}<br>
+      <label for="title"><b>Опис</b></label>
+      {{ form.text }}<br>
+      <label for="title"><b>Рік відкриття</b></label>
+      {{ form.published }}<br>
+      <label for="title"><b>Кількість місць</b></label>
+      {{ form.count }}<br>
+    <button type="submit" class="btn btn-success">Змінити</button>
+  </form>
+{% endblock %}
